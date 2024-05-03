@@ -45,13 +45,6 @@ To set up Django for your project, follow these steps:
 
 Congratulations! You have successfully set up Django for your project.
 
-## Next Steps
-
-Now that you have Django set up, you can start building your web application. Refer to the Django documentation for more information on how to get started: https://docs.djangoproject.com/
-
-Happy coding!
-
-
 # Create Model
 from django.db import models
 
@@ -86,5 +79,12 @@ https://wkhtmltopdf.org/downloads.html
 
 # Create Admin User
 python manage.py createsuperuser
+
+
+## Next Steps
+
+Now that you have Django set up, you can start building your web application. Refer to the Django documentation for more information on how to get started: https://docs.djangoproject.com/
+
+Happy coding!
 
 
