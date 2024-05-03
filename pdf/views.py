@@ -32,7 +32,13 @@ def resume(request, id):
         "page-size": "Letter",
         "encoding": "UTF-8",
     }
+    # For mac
     pdf = pdfkit.from_string(html, False, options)
+    
+    # For Window
+    # config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files (x86)\wkhtmltopdf\bin\wkhtmltopdf.exe') 
+    # pdf = pdfkit.from_string(html, False, options, configuration=config) 
+       
     response = HttpResponse(pdf, content_type="application/pdf")
     response["Content-Disposition"] = "attachment"
     filename = "resume.pdf"
