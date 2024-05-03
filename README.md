@@ -84,4 +84,7 @@ brew install Caskroom/cask/wkhtmltopdf
 https://wkhtmltopdf.org/downloads.html
 
 
+# Create Admin User
+python manage.py createsuperuser
+
 
