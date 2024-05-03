@@ -4,6 +4,7 @@ from pdf.models import Profile
 import pdfkit
 from django.http import HttpResponse
 from django.template import loader
+import datetime
 
 # Create your views here.
 def accept(request):
@@ -35,8 +36,12 @@ def resume(request, id):
     response = HttpResponse(pdf, content_type="application/pdf")
     response["Content-Disposition"] = "attachment"
     filename = "resume.pdf"
+    response["Content-Disposition"] += f"; filename={getTime()}-{filename}"
     
     return response
+
+def getTime():
+    return datetime.datetime.now()
 
 def list(request):
     profiles = Profile.objects.all()
